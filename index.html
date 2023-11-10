@@ -10,18 +10,22 @@
         <title>Alejandro Cabral</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="navbar">
-            <span id="navName">Alejandro Cabral</span>
-            <a href="#contact">Contact me</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#skills">Skills</a>
-            <a class="active" href="#home">Home</a>
+        <nav class="navbar" id="myNav">
+            <div id="navName">Alejandro Cabral</div>
+            <a href="javascript:void(0);" class="icon" onclick="navbarMobileMenu()">
+                <i class="fa fa-bars"></i>
+              </a>
+            <a href="#contact" onclick="addActiveClass(this)">Contact me</a>
+            <a href="#portfolio" onclick="addActiveClass(this)">Portfolio</a>
+            <a href="#skills" onclick="addActiveClass(this)">Skills</a>
+            <a class="active" href="#home" onclick="addActiveClass(this)">Home</a>
         </nav>
 
         <main>
@@ -39,8 +43,10 @@
                         </figure>
                     </div>
                 </div>
-                <button id="linkedinBtn"></button>
-                <button id="githubBtn"></button>
+                <div class="btnContainer">
+                    <a href="https://www.linkedin.com/in/alejandrocabral-/"><button class="btn"><i class="fa-brands fa-linkedin"></i></button></a>
+                    <a href="https://github.com/acabral27"><button class="btn"><i class="fa-brands fa-square-github"></i></button></a>
+                </div>
             </section>
             <br>
             <br>
@@ -87,25 +93,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
-
-                </div>
-                <div class="container">
-
-                </div>
             </section>
             <br>
             <!-- Portfolio section -->
             <section id="portfolio">
-
+                <br>
+                <h1>Portfolio</h1>
+                <div class="container">
+                    <iframe src="https://giphy.com/embed/5x89XRx3sBZFC" width="480" height="221" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/tumbleweed-landscape-5x89XRx3sBZFC"></a></p>
+                    <p>Under contruction</p>
+                </div>
             </section>
             <br>
             <!-- Contact me section -->
-            <section id="contactMe">
-
+            <section id="contact">
+                <br>
+                <h1>Contact Me</h1>
+                <br>
+                <form method="post" action="https://getform.io/f/b116e7a7-4cb0-4784-8ef0-f57cd5812559" class="flexCol">
+                    <input type="text" name="name" placeholder="Name" />
+                    <input type="email" name="email" placeholder="Email" />
+                    <input type="text" name="subject" placeholder="Subject" />
+                    <textarea name="message" placeholder="Your message here..."></textarea>
+                    <button type="submit" id="contactBtn">Send <i class="fa-solid fa-envelope"></i></button>
+                </form>
             </section>
         </main>
         
-        <script src="" async defer></script>
+        <script src="script/index.js" async defer></script>
     </body>
 </html>
